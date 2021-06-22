@@ -1,15 +1,13 @@
 import React from 'react';
-import Joke from './components/joke'
-
-
+import Routes from './application/routes';
 
 function App() {
 
   return (
-
-      <Joke />
-
+      <Routes />
   );
 }
 
 export default App;
+
+
