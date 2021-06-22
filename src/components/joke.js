@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import {Btn, Container} from '../styles/style'
 const Joke = () => {
 
   const [jokes, setJokes] = useState("");
@@ -10,10 +10,11 @@ const Joke = () => {
     .then(res => setJokes(res.attachments[0].text)); 
   }; 
   return (
-    <div>
-        <div>{jokes}</div>
-        <button onClick={() => getJokes()}> Siguiente chiste </button>
-    </div>
+    <Container>
+        {jokes}
+        <br></br>
+        <Btn onClick={() => getJokes()}> Siguiente chiste </Btn>
+    </Container>
 
   )
 
